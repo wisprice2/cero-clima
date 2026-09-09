@@ -1,4 +1,6 @@
 {
-  "outputDirectory": "dist/client",
+  "framework": null,
+  "buildCommand": "echo 'Deploying static site'",
+  "outputDirectory": ".",
   "cleanUrls": true
 }

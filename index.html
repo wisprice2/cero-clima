@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceroclima | Climatización Sustentable y Aire Acondicionado en Chillán y Ñuble</title>
+  <meta name="description" content="Especialistas en venta, instalación y mantención de aire acondicionado Split Inverter en Chillán, San Carlos y Región de Ñuble. 19 años de experiencia. Ahorra hasta 70% de luz. ¡Cotiza gratis al +56 9 9680 9677!">
+  <meta name="keywords" content="aire acondicionado chillan, instalacion aire acondicionado chillan, climatizacion sustentable nuble, recambio de calefactores chillan, split inverter chillan, ceroclima spa, alexis gonzalez">
+  <meta name="author" content="Ceroclima SpA">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ceroclima.cl/">
+  <meta property="og:title" content="Ceroclima | Climatización Inteligente y Sustentable">
+  <meta property="og:description" content="Equipos Split Inverter Frío/Calor con hasta 70% de ahorro energético. 19 años de experiencia en Chillán y Ñuble.">
+  <meta property="og:image" content="images/hero-cero-clima.png">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/png" href="images/logo-cero-clima-oficial.png">
+
+  <!-- Tipografías Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Hojas de Estilos con Cache-Buster -->
+  <link rel="stylesheet" href="styles.css?v=3.1">
+
+  <style>
+    /* Regla crítica para garantizar que el drawer inicie colapsado */
+    #services-drawer {
+      display: none;
+    }
+    #services-drawer.is-open {
+      display: block;
+      animation: fadeInDrawer 0.4s ease-out forwards;
+    }
+    @keyframes fadeInDrawer {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Ceroclima SpA",
+    "legalName": "CEROCLIMA SPA",
+    "taxID": "77.403.503-6",
+    "founder": {
+      "@type": "Person",
+      "name": "Alexis González",
+      "jobTitle": "Director Técnico & Instalador Especialista"
+    },
+    "description": "Empresa especializada en climatización sustentable, instalación, mantención y proyectos de aire acondicionado Split Inverter en la Región de Ñuble y Santiago.",
+    "telephone": "+56996809677",
+    "email": "ceroclima.cl@gmail.com",
+    "url": "https://ceroclima.cl",
+    "areaServed": [
+      "Chillán",
+      "Chillán Viejo",
+      "San Carlos",
+      "Bulnes",
+      "Pinto",
+      "Quillón",
+      "Coihueco",
+      "Región de Ñuble",
+      "Región Metropolitana"
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "18"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER FIJO STICKY CON LOGO Y NAVEGACIÓN
+       ======================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="logo-wrapper" id="header-logo-link" aria-label="Ir al inicio de Cero Clima">
+        <div class="logo-img-box">
+          <img src="images/logo-cero-clima-oficial.png" alt="Logotipo Oficial Cero Clima" width="44" height="44">
+        </div>
+        <div class="logo-text">
+          <span class="cero">CERO</span><span class="clima">CLIMA</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#paquete" class="nav-link">Oferta $399.990</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#tecnologia" class="nav-link">Smart Home</a>
+        <a href="#calculadora" class="nav-link">Calculadora BTU</a>
+        <a href="#recambio" class="nav-link">Recambio MMA</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20solicitar%20una%20cotizaci%C3%B3n%20gratuita" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp" 
+           id="header-cta-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.941l-1.658 6.06 6.223-1.632c1.706.927 3.666 1.458 5.751 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+          <span>Cotizar WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECCIÓN 1: HERO SECTION INMERSIVO CON VIDEO LOOP
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-media-container">
+      <video class="hero-video" autoplay loop muted playsinline poster="media/glassline-carriage-seamless-16x9.png">
+        <source src="media/hero-banner.mp4" type="video/mp4">
+        <source src="media/glassline-carriage-seamless-16x9-loop.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge-dual">
+          <span class="dot-cyan"></span>
+          <span>❄️ Invierno Cálido, Verano Fresco</span>
+          <span class="dot-orange"></span>
+          <span>Visita Técnica Gratuita</span>
+        </div>
+
+        <h1 class="hero-title">
+          Climatización <span class="gradient-text-thermal">Inteligente & Sustentable</span> para tu Hogar o Empresa
+        </h1>
+
+        <p class="hero-subtitle">
+          Olvídate del frío extremo y las olas de calor en Ñuble. Equipos <strong>Split Inverter Frío/Calor</strong> con hasta <strong>70% de ahorro energético</strong> y control por Wi-Fi. 19 años de oficio técnico certificado liderados por Alexis González.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20solicitar%20una%20evaluaci%C3%B3n%20t%C3%A9cnica%20gratuita%20a%20domicilio" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-whatsapp" 
+             id="hero-wa-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.941l-1.658 6.06 6.223-1.632c1.706.927 3.666 1.458 5.751 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+            <span>Cotizar por WhatsApp Ahora</span>
+          </a>
+
+          <a href="#paquete" class="btn btn-glass" id="hero-package-btn">
+            <span>Ver Paquete con Instalación</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </div>
+
+        <div class="trust-badges-row">
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>19 Años de Oficio Técnico</span>
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Instalación Básica Garantizada</span>
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Chillán, Ñuble & Santiago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 2: BARRA DE CREDIBILIDAD & IMPACTO EMPÍRICO
+       ======================================================================== -->
+  <section class="credibility-bar">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-num gradient-text-cyan">19</span>
+          <span class="metric-label">Años de Trayectoria Técnica</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num gradient-text-orange">70%</span>
+          <span class="metric-label">Menor Consumo vs Estufas</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num gradient-text-cyan">5.0 ★</span>
+          <span class="metric-label">Calificación 100% Positiva</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-num gradient-text-orange">100%</span>
+          <span class="metric-label">Visita y Cubicación Gratuita</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 3: OFERTA ESTRELLA - PAQUETE COMPLETO ($399.990)
+       ======================================================================== -->
+  <section class="section-pricing" id="paquete">
+    <div class="container">
+      <div class="pricing-box-wrapper">
+        <div class="featured-ribbon">Más Vendido</div>
+
+        <div class="pricing-grid">
+          <div class="pricing-content-col">
+            <span class="pricing-badge-promo">⚡ Promoción Destacada en Ñuble</span>
+            <h2>Aire Acondicionado <span class="gradient-text-thermal">Split Inverter Frío/Calor</span></h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+              Solución definitiva para climatizar dormitorios, livings y locales comerciales sin sorpresas en la boleta de luz.
+            </p>
+
+            <div class="price-display">
+              <span class="price-currency">$</span>
+              <span class="price-amount">399.990</span>
+              <span class="price-suffix">CLP / Equipo + Instalación básica</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Equipo Split Inverter Alta Eficiencia:</strong> Frío en verano y calor en invierno.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Instalación Básica en Muro:</strong> Montaje de unidad interior y exterior con soportes reforzados.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Tendido de Cañerías de Cobre:</strong> Aisladas térmicamente hasta 3 a 4 metros según obra.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Vacío Técnico con Bomba Profesional:</strong> Eliminación absoluta de humedad en el circuito.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Sellado Hermético y Puesta en Marcha:</strong> Capacitación en uso y control inteligente.</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20aprovechar%20la%20oferta%20destacada%20del%20Split%20Inverter%20por%20$399.990%20con%20instalaci%C3%B3n" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-orange" 
+               id="package-cta-btn">
+              <span>Quiero Agendar Esta Oferta</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="pricing-image-box">
+            <img src="images/split-inverter.png" alt="Equipo Split Inverter Cero Clima Instalado" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 4: PROPUESTA DE VALOR & SUSTENTABILIDAD
+       ======================================================================== -->
+  <section class="section-value">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Por Qué Elegir Cero Clima</span>
+        <h2 class="section-heading">Un Mejor Clima También Cuida Nuestro Entorno</h2>
+        <p class="section-desc">
+          Reemplaza la combustión a leña contaminante y las estufas eléctricas de alto consumo por ingeniería termodinámica Inverter de vanguardia.
+        </p>
+      </div>
+
+      <div class="value-cards-grid">
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Ahorro Real Hasta 70%</h3>
+          <p>
+            La tecnología Inverter regula la velocidad del compresor sin arranques intempestivos, logrando una temperatura constante con una fracción del consumo eléctrico tradicional.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon-box" style="background: var(--orange-subtle); border-color: var(--border-orange); color: var(--orange-primary);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Cero Humo y Cero Hollín</h3>
+          <p>
+            Apoyamos activamente el Plan de Descontaminación Atmosférica (PDA) en Chillán y Chillán Viejo eliminando el material particulado MP2.5 en tu hogar.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>19 Años de Oficio Directo</h3>
+          <p>
+            Sin intermediarios ni subcontratistas improvisados. Alexis González y su equipo técnico ejecutan personalmente cada perforación, vacío y calibración.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 5: CATÁLOGO DE SERVICIOS VERIFICADOS
+       ======================================================================== -->
+  <section class="section-services" id="servicios">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Nuestra Experiencia en Terreno</span>
+        <h2 class="section-heading">Soluciones Integrales de Climatización</h2>
+        <p class="section-desc">
+          Desde residencias unifamiliares en el campo hasta ópticas y recintos comerciales de alta afluencia.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1: Visible por defecto -->
+        <div class="service-item-card">
+          <div class="service-card-body">
+            <span class="service-tag">Servicio Residencial & Comercial</span>
+            <h3>Instalación y Montaje Certificado</h3>
+            <p>
+              Instalación de unidades Split Muro Inverter y convencionales con canalización estética y anclajes estructurales que aseguran nula vibración y máximo confort acústico.
+            </p>
+            <ul class="service-points">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Perforación de muros limpia y sellado hermético.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Vacío con bomba de dos etapas y test de fugas.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Conexión eléctrica reglamentaria y puesta en marcha.</span>
+              </li>
+            </ul>
+            <div class="service-footer-cta">
+              <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20aire%20acondicionado" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="width: 100%;">Cotizar Instalación</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2: Visible por defecto -->
+        <div class="service-item-card">
+          <div class="service-card-body">
+            <span class="service-tag">Higiene & Rendimiento</span>
+            <h3>Mantenimiento y Sanitización Profunda</h3>
+            <p>
+              Desarme técnico y lavado a presión con hidrolavadora y químicos desinfectantes para eliminar hongos, ácaros, polvo acumulado y malos olores en la turbina.
+            </p>
+            <ul class="service-points">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Limpieza profunda de evaporador, turbina y filtros.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Medición de presiones y recarga de refrigerante ecológico.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Recuperación de la eficiencia térmica y ahorro energético.</span>
+              </li>
+            </ul>
+            <div class="service-footer-cta">
+              <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20agendar%20una%20mantenci%C3%B3n%20preventiva%20y%20sanitizaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="width: 100%;">Agendar Mantención</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawer Expandible: Servicios 3 y 4 -->
+      <div class="services-drawer" id="services-drawer" style="display: none;">
+        <div class="services-grid" style="margin-top: 32px;">
+          <!-- Servicio 3 -->
+          <div class="service-item-card">
+            <div class="service-card-body">
+              <span class="service-tag">Asesoría Sin Costo</span>
+              <h3>Evaluación y Cubicación Térmica en Terreno</h3>
+              <p>
+                Visita técnica 100% gratuita para calcular con precisión matemática los BTU requeridos, analizando orientación solar, metros cuadrados y pérdidas de calor.
+              </p>
+              <ul class="service-points">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Cálculo exacto de potencia térmica (9k, 12k, 18k, 24k BTU).</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Ubicación estratégica para evitar corrientes directas.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Presupuesto transparente y cerrado sin cobros extra.</span>
+                </li>
+              </ul>
+              <div class="service-footer-cta">
+                <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20solicitar%20una%20visita%20t%C3%A9cnica%20gratuita%20de%20cubicaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="width: 100%;">Solicitar Visita Gratis</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Servicio 4 -->
+          <div class="service-item-card">
+            <div class="service-card-body">
+              <span class="service-tag">Empresas e Instituciones</span>
+              <h3>Climatización Comercial e Industrial</h3>
+              <p>
+                Soluciones para oficinas, locales de salud, retail y restaurantes en Chillán, San Carlos y Santiago con facturación formal y servicio técnico continuo.
+              </p>
+              <ul class="service-points">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Equipos de alta capacidad (Cassette, Piso-Cielo, Ducto).</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Facturación electrónica Ceroclima SpA (RUT 77.403.503-6).</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Planes de mantenimiento mensual o trimestral corporativo.</span>
+                </li>
+              </ul>
+              <div class="service-footer-cta">
+                <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20cotizar%20un%20proyecto%20de%20climatizaci%C3%B3n%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="width: 100%;">Cotización Comercial</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón de Expansión / Colapso -->
+      <div class="services-expand-action">
+        <button type="button" class="btn btn-glass btn-expand-services" id="btn-toggle-services" aria-expanded="false" aria-controls="services-drawer">
+          <span class="btn-expand-text">Ver Más Servicios Especializados (2)</span>
+          <svg class="btn-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 6: TECNOLOGÍA SMART HOME IOT
+       ======================================================================== -->
+  <section class="section-tech" id="tecnologia">
+    <div class="container">
+      <div class="tech-grid">
+        <div class="tech-img-wrapper">
+          <img src="images/smart-home.png" alt="Control de Climatización por Wi-Fi y App Móvil Cero Clima" loading="lazy">
+          <div class="tech-floating-card">
+            <div class="wifi-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+            </div>
+            <div>
+              <h4 style="font-size: 1rem; margin-bottom: 2px;">Conectividad Wi-Fi Integrada</h4>
+              <p style="font-size: 0.84rem; color: var(--text-muted); margin: 0;">Enciende tu climatizador desde tu celular antes de llegar a casa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-content-col">
+          <span class="section-pretitle">Domótica y Automatización</span>
+          <h2 class="section-heading">Controla tu Clima desde Donde Estés</h2>
+          <p class="section-desc" style="margin-bottom: 24px;">
+            Todos nuestros paquetes Inverter permiten vincular el equipo a tu red Wi-Fi de hogar. Ajusta la temperatura, programa horarios de encendido y monitorea el gasto desde tu smartphone Android o iPhone.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--cyan-electric); font-size: 1.2rem; font-weight: 800;">01.</div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Precalentamiento o Enfriamiento Remoto</h4>
+                <p style="font-size: 0.92rem; color: var(--text-muted);">Enciende el calor en invierno 15 minutos antes de volver del trabajo y encuentra tu living a la temperatura perfecta.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--orange-primary); font-size: 1.2rem; font-weight: 800;">02.</div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Programación Semanal Inteligente</h4>
+                <p style="font-size: 0.92rem; color: var(--text-muted);">Define rutinas para apagarlo de noche o mantener un modo eco durante la madrugada, evitando desperdicios de energía.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--cyan-electric); font-size: 1.2rem; font-weight: 800;">03.</div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 4px;">Refrigerantes Ecológicos R410A / R32</h4>
+                <p style="font-size: 0.92rem; color: var(--text-muted);">Gases amigables con el medio ambiente con cero impacto en la capa de ozono y máxima transferencia térmica.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20saber%20m%C3%A1s%20sobre%20equipos%20con%20control%20Wi-Fi" target="_blank" rel="noopener noreferrer" class="btn btn-cyan">
+            <span>Consultar Modelos Wi-Fi</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 7: CALCULADORA INTERACTIVA DE CUBICAJE TÉRMICO (BTU)
+       ======================================================================== -->
+  <section class="section-calculator" id="calculadora">
+    <div class="container">
+      <div class="section-title-wrap" style="margin-bottom: 40px;">
+        <span class="section-pretitle">Herramienta Interactiva</span>
+        <h2 class="section-heading">¿Cuántos BTU Necesita tu Espacio?</h2>
+        <p class="section-desc">
+          Calcula la potencia frigorífica y calórica ideal para tu habitación, living o local comercial en segundos.
+        </p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-inputs-col">
+          <div class="calc-control-group">
+            <label class="calc-label">1. Selecciona el Tipo de Ambiente:</label>
+            <div class="space-types-grid">
+              <button type="button" class="btn-space-type" data-factor="550">Dormitorio / Home Office</button>
+              <button type="button" class="btn-space-type active" data-factor="650">Living / Comedor</button>
+              <button type="button" class="btn-space-type" data-factor="750">Comercio / Planta Libre</button>
+            </div>
+          </div>
+
+          <div class="calc-control-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <label class="calc-label" style="margin-bottom: 0;">2. Superficie en Metros Cuadrados (m²):</label>
+              <span id="calc-area-val" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--cyan-electric);">25 m²</span>
+            </div>
+            <div class="range-slider-wrap">
+              <input type="range" min="10" max="65" value="25" class="calc-slider" id="calc-slider">
+              <div class="slider-values-row">
+                <span>10 m²</span>
+                <span>25 m²</span>
+                <span>40 m²</span>
+                <span>65 m²</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.04); border-radius: var(--radius-md); padding: 14px 18px; border: 1px solid var(--border-subtle); font-size: 0.88rem; color: var(--text-muted);">
+            💡 <strong>Nota del Experto:</strong> En Cero Clima ratificamos este cálculo en terreno evaluando la aislación térmica y orientación al sol para garantizar que no pagues de más.
+          </div>
+        </div>
+
+        <div class="calc-result-box">
+          <div>
+            <span class="calc-result-tag">Capacidad Sugerida</span>
+            <div class="calc-btu-display" id="calc-btu-result">12.000 BTU/h</div>
+            <p class="calc-coverage-text" id="calc-coverage-text">
+              Recomendado para living-comedor mediano o espacios de 20 a 30 m² con aislación estándar.
+            </p>
+          </div>
+
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="calc-cta-btn">
+            <span>Cotizar Esta Capacidad</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 8: PROGRAMA RECAMBIO DE CALEFACTORES (MMA CHILLÁN)
+       ======================================================================== -->
+  <section class="section-recambio" id="recambio">
+    <div class="container">
+      <div class="recambio-card">
+        <div class="recambio-text-col">
+          <div class="recambio-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>PDA Chillán & Chillán Viejo</span>
+          </div>
+
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.7rem); margin-bottom: 16px;">
+            Programa de Recambio de Calefactores del Ministerio del Medio Ambiente
+          </h2>
+
+          <p style="color: #cbd5e1; font-size: 1.02rem; line-height: 1.65; margin-bottom: 24px;">
+            El Ministerio del Medio Ambiente (MMA) abre convocatorias periódicas para reemplazar estufas a leña por sistemas de aire acondicionado Inverter de alta eficiencia. En Cero Clima te asesoramos para que aproveches este subsidio estatal y modernices la climatización de tu familia.
+          </p>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #cbd5e1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Disminución radical del gasto mensual en parafina o leña seca.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #cbd5e1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Eliminación de riesgos de incendio y emisiones de monóxido intradomiciliario.</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #cbd5e1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Asesoría personalizada en postulaciones y requerimientos técnicos.</span>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20orientaci%C3%B3n%20sobre%20el%20Programa%20de%20Recambio%20de%20Calefactores%20en%20Chill%C3%A1n" target="_blank" rel="noopener noreferrer" class="btn btn-orange">
+            <span>Consultar por el Recambio</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="recambio-img-box">
+          <img src="images/recambio-calefactores.png" alt="Programa Recambio de Calefactores MMA Chillán Cero Clima" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 9: GALERÍA INTERACTIVA DE PROYECTOS REALES (ÑUBLE)
+       ======================================================================== -->
+  <section class="section-projects" id="proyectos">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Evidencia Empírica de Obras</span>
+        <h2 class="section-heading">Proyectos Reales en Terreno</h2>
+        <p class="section-desc">
+          Registros fotográficos auténticos de nuestras instalaciones en la Región de Ñuble y Santiago. Cero imágenes de stock genéricas.
+        </p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Todos los Trabajos</button>
+        <button class="filter-btn" data-filter="residencial">Hogares y Residencias</button>
+        <button class="filter-btn" data-filter="comercial">Comercial & Salud</button>
+        <button class="filter-btn" data-filter="rural">Zonas Rurales / Cordillera</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Proyecto 1: Óptica San Carlos -->
+        <div class="project-card" data-category="comercial">
+          <div class="project-thumbnail-box">
+            <img src="images/proyecto-optica-san-carlos.png" alt="Instalación Split Inverter en Óptica Comercial San Carlos" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>San Carlos (Comercial)</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Óptica Comercial en San Carlos</h4>
+            <p>Instalación estética de alta capacidad en local de atención a público, garantizando ambiente climatizado y sin cableado visible.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Residencial Bulnes -->
+        <div class="project-card" data-category="residencial">
+          <div class="project-thumbnail-box">
+            <img src="images/proyecto-residencial-bulnes.png" alt="Instalación Residencial en Bulnes Ñuble" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Bulnes (Residencial)</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Residencia Familiar en Bulnes</h4>
+            <p>Climatización integral en living-comedor con tecnología Split Inverter para afrontar las heladas invernales con bajo consumo.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Vivienda Rural Pinto -->
+        <div class="project-card" data-category="rural">
+          <div class="project-thumbnail-box">
+            <img src="images/proyecto-pinto.png" alt="Montaje de Climatización en Pinto Ñuble" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Pinto (Sector Rural)</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Vivienda de Campo en Pinto</h4>
+            <p>Montaje exterior con anclajes anti-intemperie en sector precordillerano para garantizar flujo térmico continuo.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: Sarabia -->
+        <div class="project-card" data-category="residencial">
+          <div class="project-thumbnail-box">
+            <img src="images/proyecto-sarabia.png" alt="Obra de Climatización Proyecto Sarabia" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Chillán (Residencial)</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Proyecto Residencial Sarabia</h4>
+            <p>Desembalaje y fijación de unidades murales con vacío técnico y protección de terminaciones arquitectónicas interiores.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 5: Chillán Urbano -->
+        <div class="project-card" data-category="comercial">
+          <div class="project-thumbnail-box">
+            <img src="images/proyecto-chillan.png" alt="Instalaciones Urbanas Chillán Cero Clima" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Chillán Centro</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Comercio y Hogares en Chillán Urbano</h4>
+            <p>Instalaciones centradas en muros maestros con orientación aerodinámica para lograr cobertura térmica envolvente.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 6: Técnico en Faena -->
+        <div class="project-card" data-category="residencial">
+          <div class="project-thumbnail-box">
+            <img src="images/tecnico-cero-clima.png" alt="Alexis González Técnico en Terreno Cero Clima" loading="lazy">
+            <div class="project-location-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Ñuble en Terreno</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Atención Técnica Personalizada</h4>
+            <p>19 años de oficio técnico en climatización residencial e industrial. Trato directo con el especialista a cargo de tu obra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 10: PRUEBA SOCIAL & TESTIMONIOS VERIFICADOS
+       ======================================================================== -->
+  <section class="section-testimonials">
+    <div class="container">
+      <div class="testimonials-grid">
+        <div class="review-highlight-card">
+          <div class="stars-row">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+
+          <p class="review-quote">
+            "Recomendable ! Muy buen servicio y asesoría técnica en la instalación."
+          </p>
+
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">RV</div>
+            <div class="reviewer-info">
+              <h5>Rosa María Venegas Urra</h5>
+              <span>Cliente Verificado en Chillán / Facebook</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-text-col">
+          <span class="section-pretitle">Confianza y Respaldo Regional</span>
+          <h2 class="section-heading">5.0 Estrellas y 100% de Recomendaciones</h2>
+          <p class="section-desc" style="margin-bottom: 24px;">
+            En Cero Clima respetamos el código de veracidad: no publicamos testimonios inflados ni reseñas anónimas. Nuestro prestigio se sustenta en 19 años de boca a boca con vecinos, familias y emprendedores de Ñuble.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px;">
+            <div style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 0.95rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-electric)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Respaldo de colaboradores del gremio en Chillán (Acondiparts y técnicos certificados).</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 0.95rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-electric)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Garantía formal en la instalación de cañerías, sellos y circuitos frigoríficos.</span>
+            </div>
+          </div>
+
+          <a href="https://www.facebook.com/ceroclima.climatizacion.sustentable" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+            <span>Ver Recomendaciones en Facebook</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 11: PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
+       ======================================================================== -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-pretitle">Dudas Resueltas</span>
+        <h2 class="section-heading">Preguntas Frecuentes</h2>
+        <p class="section-desc">
+          Todo lo que necesitas saber antes de climatizar tus espacios.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>¿Cómo sé cuántos BTU necesita exactamente mi casa o negocio?</span>
+            <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Depende de los metros cuadrados, la aislación de tus muros y la cantidad de ventanas orientadas al sol. Como regla general: 9.000 BTU cubren hasta 18-20 m², 12.000 BTU hasta 25-30 m², 18.000 BTU hasta 45 m² y 24.000 BTU hasta 65 m². En Cero Clima realizamos una evaluación técnica y cubicación presencial 100% gratuita para confirmarlo.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>¿Por qué un Split Inverter ahorra hasta un 70% frente a estufas eléctricas?</span>
+            <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Los calefactores tradicionales convierten energía eléctrica en calor mediante resistencias de altísimo consumo. Un aire acondicionado Inverter funciona como bomba de calor termodinámica: transporta calor del exterior al interior modulando continuamente la velocidad del compresor, entregando entre 3 a 4 veces más energía térmica por cada watt consumido.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>¿Qué incluye exactamente el paquete de $399.990 CLP?</span>
+            <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Incluye el equipo de aire acondicionado Split Inverter Frío/Calor de alta eficiencia, montaje de la unidad interior y exterior, tendido de cañería de cobre aislada hasta 3-4 metros, perforación de muro, sellado hermético, vacío profesional de líneas con bomba técnica, conexión eléctrica y capacitación de uso.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>¿Cómo funciona el Programa de Recambio de Calefactores del Ministerio?</span>
+            <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              El Ministerio del Medio Ambiente (MMA) abre convocatorias en el marco del Plan de Descontaminación Atmosférica (PDA) para Chillán y Chillán Viejo. Entrega un copago subvencionado para retirar estufas a leña e instalar equipos Inverter. En Cero Clima asesoramos a las familias en la orientación técnica de sus postulaciones.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>¿Qué comunas atienden además de Chillán?</span>
+            <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Cubrimos de manera habitual Chillán, Chillán Viejo, San Carlos, Bulnes, Pinto, Quillón, Coihueco y sectores aledaños de la Región de Ñuble. También ejecutamos proyectos residenciales e institucionales en la Región Metropolitana (Santiago y Providencia).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 12: FORMULARIO DE COTIZACIÓN + CONTACTO DIRECTO
+       ======================================================================== -->
+  <section class="section-contact" id="contacto">
+    <div class="container">
+      <div class="contact-layout-grid">
+        <div class="contact-info-col">
+          <span class="section-pretitle">Contacto Directo</span>
+          <h2>Hablemos de tu Proyecto de Climatización</h2>
+          <p>
+            Coordina una visita técnica a domicilio sin costo o envíanos tus requerimientos. Te responderemos de inmediato con atención directa por WhatsApp o correo.
+          </p>
+
+          <div class="contact-methods-list">
+            <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20deseo%20solicitar%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+              <div class="method-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.941l-1.658 6.06 6.223-1.632c1.706.927 3.666 1.458 5.751 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">WhatsApp Directo</span>
+                <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #ffffff;">+56 9 9680 9677</div>
+              </div>
+            </a>
+
+            <a href="mailto:ceroclima.cl@gmail.com" class="contact-method-card">
+              <div class="method-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Correo Electrónico Oficial</span>
+                <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #ffffff;">ceroclima.cl@gmail.com</div>
+              </div>
+            </a>
+
+            <div class="contact-method-card">
+              <div class="method-icon" style="background: var(--orange-subtle); color: var(--orange-primary);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Base Operativa & Legal</span>
+                <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #ffffff;">Chillán (Ñuble) & Providencia (Santiago)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Cotización Rápida</h3>
+          <form id="quote-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Nombre Completo:</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-city" class="form-label">Comuna / Ubicación:</label>
+              <select id="form-city" class="form-select">
+                <option value="Chillán">Chillán</option>
+                <option value="Chillán Viejo">Chillán Viejo</option>
+                <option value="San Carlos">San Carlos</option>
+                <option value="Bulnes">Bulnes</option>
+                <option value="Pinto">Pinto</option>
+                <option value="Quillón">Quillón</option>
+                <option value="Coihueco">Coihueco</option>
+                <option value="Santiago">Santiago / Región Metropolitana</option>
+                <option value="Otra Comuna">Otra Comuna de Ñuble</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-service" class="form-label">Servicio Requerido:</label>
+              <select id="form-service" class="form-select">
+                <option value="Paquete Oferta $399.990 (Split Inverter + Instalación)">Paquete Oferta $399.990 (Equipo + Instalación)</option>
+                <option value="Instalación de Aire Acondicionado">Instalación Básica o Especial</option>
+                <option value="Mantenimiento y Sanitización Profunda">Mantenimiento y Sanitización</option>
+                <option value="Evaluación Técnica Gratuita a Domicilio">Visita Técnica y Cubicación Gratuita</option>
+                <option value="Proyecto Comercial o Institucional">Proyecto Comercial / Empresa</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-notes" class="form-label">Mensaje o Detalle del Espacio (Opcional):</label>
+              <textarea id="form-notes" class="form-textarea" rows="3" placeholder="Ej. Casa de 2 pisos, living de aprox. 25 m²..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%;" id="form-submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.941l-1.658 6.06 6.223-1.632c1.706.927 3.666 1.458 5.751 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+              <span>Enviar Consulta a WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECCIÓN 13: FOOTER CORPORATIVO & COBERTURA
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="logo-wrapper" style="margin-bottom: 8px;">
+            <div class="logo-img-box">
+              <img src="images/logo-cero-clima-oficial.png" alt="Logotipo Oficial Cero Clima" width="44" height="44">
+            </div>
+            <div class="logo-text">
+              <span class="cero">CERO</span><span class="clima">CLIMA</span>
+            </div>
+          </div>
+          <p>
+            <strong>CEROCLIMA SPA</strong> (RUT: 77.403.503-6). Climatización limpia, eficiente y sustentable con 19 años de oficio técnico certificado.
+          </p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--cyan-electric);">
+            Director Técnico: Alexis González
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#paquete">Oferta $399.990</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#calculadora">Calculadora BTU</a></li>
+            <li><a href="#proyectos">Galería de Faenas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Cobertura Ñuble</h5>
+          <ul class="footer-links-list">
+            <li><a href="#contacto">Chillán & Chillán Viejo</a></li>
+            <li><a href="#contacto">San Carlos</a></li>
+            <li><a href="#contacto">Bulnes</a></li>
+            <li><a href="#contacto">Pinto</a></li>
+            <li><a href="#contacto">Quillón & Coihueco</a></li>
+            <li><a href="#contacto">Santiago (RM)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Canales Oficiales</h5>
+          <ul class="footer-links-list">
+            <li><a href="tel:+56996809677">📞 +56 9 9680 9677</a></li>
+            <li><a href="https://wa.me/56996809677" target="_blank" rel="noopener noreferrer">💬 WhatsApp Directo</a></li>
+            <li><a href="mailto:ceroclima.cl@gmail.com">✉️ ceroclima.cl@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/cero_clima/" target="_blank" rel="noopener noreferrer">📷 Instagram (@cero_clima)</a></li>
+            <li><a href="https://www.facebook.com/ceroclima.climatizacion.sustentable" target="_blank" rel="noopener noreferrer">📘 Facebook Oficial</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Ceroclima SpA. Todos los derechos reservados. Climatización Sustentable en Ñuble y Chile.
+        </div>
+        <div>
+          Instalaciones garantizadas bajo norma técnica y eficiencia Inverter.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOTÓN FLOTANTE PERSISTENTE DE WHATSAPP CON NOTIFICACIÓN PULSANTE
+       ======================================================================== -->
+  <a href="https://wa.me/56996809677?text=Hola%20Cero%20Clima,%20estoy%20viendo%20su%20p%C3%A1gina%20web%20y%20deseo%20solicitar%20una%20cotizaci%C3%B3n" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-wa-btn" 
+     id="floating-wa" 
+     aria-label="Contactar a Cero Clima por WhatsApp">
+    <div class="wa-badge-pulse"></div>
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.941l-1.658 6.06 6.223-1.632c1.706.927 3.666 1.458 5.751 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
+  </a>
+
+  <!-- Script Principal de Interacción con Cache-Buster -->
+  <script src="app.js?v=3.1"></script>
+</body>
+</html>
