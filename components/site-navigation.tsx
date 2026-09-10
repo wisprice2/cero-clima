@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/components/link';
 
 const links = [
   { href: '/#servicios', label: 'Servicios' },

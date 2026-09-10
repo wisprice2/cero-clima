@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/components/link';
 import { ArrowRight, Check, Columns3, FileDown, Search, SlidersHorizontal, Trash2, X } from 'lucide-react';
 
 import { products, productSegments, productInquiry } from '@/lib/products';

@@ -20,12 +20,10 @@ import {
   Wrench,
 } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Brand } from '@/components/brand';
 import { BtuSelector } from '@/components/btu-selector';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNavigation } from '@/components/site-navigation';
-
 import {
   Accordion,
   AccordionContent,
