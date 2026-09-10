@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { Brand } from '@/components/brand';
+import { Link } from '@/components/link';
 import { BtuSelector } from '@/components/btu-selector';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNavigation } from '@/components/site-navigation';
@@ -30,6 +31,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+
+export const dynamic = 'force-static';
 
 const whatsapp =
   'https://wa.me/56996809677?text=Hola%20CEROCLIMA%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20climatizaci%C3%B3n.';
