@@ -1,0 +1,12 @@
+# robots.txt — CEROCLIMA
+# Reemplazar TU-DOMINIO.cl con el dominio real antes de subir
+
+User-agent: *
+Allow: /
+
+# Assets internos del framework — no indexar
+Disallow: /_next/
+Disallow: /.vite/
+
+# Sitemap
+Sitemap: https://TU-DOMINIO.cl/sitemap.xml

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function Brand({ homeHref = '/#inicio' }: { homeHref?: string }) {
   return (
-    <Link className="brand" href={homeHref} aria-label="Cero Clima, inicio">
+    <Link className="brand" href={homeHref} aria-label="CEROCLIMA, inicio">
       <span className="brand-viewport" aria-hidden="true">
         <Image
           className="brand-image"
@@ -14,7 +14,7 @@ export function Brand({ homeHref = '/#inicio' }: { homeHref?: string }) {
           priority
         />
       </span>
-      <span className="brand-name">Cero Clima</span>
+      <span className="brand-name">CEROCLIMA</span>
     </Link>
   );
 }
