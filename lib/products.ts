@@ -1,25 +1,6 @@
-export type ProductSegment = 'Residencial' | 'Comercial' | 'Energía térmica' | 'Accesorios';
-
-export type Product = {
-  slug: string;
-  title: string;
-  brand: string;
-  segment: ProductSegment;
-  family: string;
-  technology: string;
-  refrigerant: string;
-  capacity: string;
-  image: string;
-  gallery: string[];
-  description: string;
-  features: string[];
-  models: string[];
-  specs: { label: string; value: string }[];
-  datasheet?: string;
-  datasheetLabel?: string;
-  video?: string;
-  note?: string;
-};
+export type { Product, ProductSegment, ProductSpec } from './product-types';
+export { productSegments } from './product-types';
+import type { Product } from './product-types';
 
 export const products: Product[] = [
   {
@@ -187,8 +168,11 @@ export const products: Product[] = [
     technology: 'On/Off',
     refrigerant: 'R410A',
     capacity: '12.000 a 48.000 BTU/h',
-    image: '/images/catalog/cassette-convencional-tcl.webp',
-    gallery: ['/images/catalog/cassette-convencional-tcl.webp', '/images/catalog/gallery/cassette-convencional-exterior.webp'],
+    image: '/images/catalog/cassette-convencional-tcl-transparent.png',
+    gallery: [
+      '/images/catalog/cassette-convencional-tcl-transparent.png',
+      '/images/catalog/gallery/cassette-convencional-exterior-transparent.png',
+    ],
     description: 'Alternativa cassette convencional con fotografías reales de unidad interior y exterior.',
     features: ['Cuatro vías', 'Auto Start', 'Control remoto', 'Formato comercial'],
     models: ['12.000 BTU/h', '18.000 BTU/h', '24.000 BTU/h', '36.000 BTU/h', '48.000 BTU/h'],
@@ -322,8 +306,8 @@ export const products: Product[] = [
     technology: 'Ventilación',
     refrigerant: 'No aplica',
     capacity: '90, 120 y 150 cm',
-    image: '/images/catalog/cortina-de-aire.webp',
-    gallery: ['/images/catalog/cortina-de-aire.webp', '/images/catalog/gallery/cortina-frontal.webp', '/images/catalog/gallery/cortina-control.webp'],
+    image: '/images/catalog/cortina-de-aire-transparent.png',
+    gallery: ['/images/catalog/cortina-de-aire-transparent.png'],
     description: 'Barrera de aire para accesos comerciales con tránsito frecuente, apta para instalación sobre puertas.',
     features: ['Control remoto', 'Ventilador centrífugo', 'Fácil limpieza', 'Altura de 2,3 a 3 m'],
     models: ['CAC-090C2', 'CAC-120C2', 'CAC-150C2'],
@@ -345,7 +329,7 @@ export const products: Product[] = [
     refrigerant: 'Según modelo',
     capacity: 'Dimensionamiento por demanda',
     image: '/images/catalog/bomba-calor-daitsu-v2.webp',
-    gallery: ['/images/catalog/bomba-calor-daitsu-v2.webp', '/images/catalog/gallery/bomba-calor-daitsu-alternativa.webp', '/images/catalog/gallery/bomba-calor-daitsu-ambiente.webp'],
+    gallery: ['/images/catalog/bomba-calor-daitsu-v2.webp', '/images/catalog/gallery/bomba-calor-daitsu-ambiente.webp'],
     description: 'Equipo compacto para producir y acumular agua caliente sanitaria mediante tecnología de bomba de calor.',
     features: ['Acumulación integrada', 'Análisis de demanda', 'Integración hidráulica', 'Instalación profesional'],
     models: ['Modelo y volumen por confirmar'],
@@ -466,30 +450,7 @@ export const products: Product[] = [
     ],
     note: 'El color de la bombona no se utiliza como identificación técnica del refrigerante.',
   },
-  {
-    slug: 'campana-de-difusion',
-    title: 'Campana de Difusión',
-    brand: 'CLARK',
-    segment: 'Accesorios',
-    family: 'Difusión de aire',
-    technology: 'Accesorio',
-    refrigerant: 'No aplica',
-    capacity: 'Configuración por proyecto',
-    image: '/images/catalog/campana-difusion.webp',
-    gallery: ['/images/catalog/campana-difusion.webp'],
-    description: 'Complemento para conducción y distribución de aire en instalaciones compatibles.',
-    features: ['Integración por proyecto', 'Distribución de aire', 'Aplicación comercial', 'Medidas por confirmar'],
-    models: ['Configuración según instalación'],
-    specs: [
-      { label: 'Aplicación', value: 'Difusión y conducción de aire' },
-      { label: 'Compatibilidad', value: 'Según equipo y diseño de instalación' },
-      { label: 'Medidas', value: 'Confirmar por proyecto' },
-      { label: 'Disponibilidad', value: 'Consultar' },
-    ],
-  },
 ];
-
-export const productSegments: ProductSegment[] = ['Residencial', 'Comercial', 'Energía térmica', 'Accesorios'];
 
 export function getProduct(slug: string) {
   return products.find((product) => product.slug === slug);

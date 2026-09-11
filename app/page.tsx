@@ -24,6 +24,7 @@ import Image from 'next/image';
 import { Brand } from '@/components/brand';
 import { Link } from '@/components/link';
 import { BtuSelector } from '@/components/btu-selector';
+import { HeroVideo } from '@/components/hero-video';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNavigation } from '@/components/site-navigation';
 
@@ -216,31 +217,23 @@ export default function Home() {
 
       <section className="hero" id="inicio" aria-labelledby="hero-title">
         <Image
-          className="hero-image"
+          className="hero-image hero-poster"
           src="/images/hero-cero-clima.webp"
           alt="Living moderno climatizado con aire acondicionado frío y calor"
-          width="1792"
-          height="1024"
+          width="1672"
+          height="941"
+          priority
         />
+        <HeroVideo />
         <div className="hero-overlay" />
         <div className="shell hero-content">
           <div className="hero-copy">
             <div className="eyebrow">
               <Clock3 aria-hidden="true" />
-              21 años de experiencia
+              21 años de experiencia en climatización
             </div>
-            <h1 id="hero-title">
-              <span className="hero-copy-desktop">Climatización Inteligente y Sustentable para tu Hogar o Negocio</span>
-              <span className="hero-copy-mobile">El clima ideal para tu hogar o negocio</span>
-            </h1>
-            <p>
-              <span className="hero-copy-desktop">
-                Soluciones frío/calor dimensionadas para cada espacio, con tecnología Inverter y control Wi-Fi en los modelos compatibles.
-              </span>
-              <span className="hero-copy-mobile">
-                Soluciones frío/calor eficientes, dimensionadas e instaladas por especialistas.
-              </span>
-            </p>
+            <h1 id="hero-title">Climatización eficiente para tu hogar o negocio</h1>
+            <p>Soluciones de frío y calor dimensionadas para cada espacio, con tecnología Inverter y control Wi-Fi en modelos compatibles.</p>
             <div className="hero-actions">
               <WhatsappButton>Cotizar ahora</WhatsappButton>
               <Link className="button button-orange" href="/productos">
@@ -249,9 +242,9 @@ export default function Home() {
               </Link>
             </div>
             <div className="hero-proof" aria-label="Indicadores de confianza">
-              <span><BadgeCheck />Técnicos especialistas</span>
-              <span><ClipboardCheck />Evaluación técnica</span>
-              <span><Wrench />Instalación profesional</span>
+              <span><Check aria-hidden="true" />Técnicos especialistas</span>
+              <span><Check aria-hidden="true" />Evaluación técnica</span>
+              <span><Check aria-hidden="true" />Instalación profesional</span>
             </div>
           </div>
         </div>

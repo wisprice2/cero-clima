@@ -2,6 +2,7 @@ import { Camera, Mail, MapPin, MessageCircle, ThumbsUp } from 'lucide-react';
 
 import { Brand } from '@/components/brand';
 import { productInquiry } from '@/lib/products';
+import { SecretGate } from '@/components/secret-gate';
 
 export function SiteFooter({
   whatsappHref = productInquiry('una solución de climatización'),
@@ -25,7 +26,9 @@ export function SiteFooter({
           <a href="https://www.facebook.com/ceroclima.climatizacion.sustentable" target="_blank" rel="noreferrer">
             <ThumbsUp aria-hidden="true" />Facebook
           </a>
-          <small>RUT 77.403.503-6</small>
+          <small>
+            <SecretGate>RUT 77.403.503-6</SecretGate>
+          </small>
         </div>
       </footer>
 

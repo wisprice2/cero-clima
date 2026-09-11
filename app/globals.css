@@ -2081,7 +2081,7 @@ footer {
   .site-header .button { min-height: 38px; padding-inline: 13px; font-size: 0.68rem; }
   .hero, .hero-content { min-height: 620px; }
   .hero-content { align-items: flex-end; padding-block: 225px 36px; }
-  .hero-image { object-position: 64% center; }
+  .hero-image { object-position: 100% center; }
   .hero-overlay { background: linear-gradient(90deg, rgba(3, 9, 17, 0.92), rgba(3, 9, 17, 0.62) 48%, rgba(3, 9, 17, 0.1)), linear-gradient(0deg, rgba(3, 9, 17, 0.94), rgba(3, 9, 17, 0.46) 48%, transparent 76%); }
   .hero-copy { max-width: 530px; }
   .hero-copy-desktop { display: none; }
@@ -2128,7 +2128,7 @@ footer {
   .hero, .hero-content { min-height: 620px; }
   .hero-content { align-items: flex-end; padding-block: 250px 28px; }
   .hero-copy { width: 100%; max-width: 360px; }
-  .hero-image { object-position: 67% center; }
+  .hero-image { object-position: 90% center; }
   .hero-overlay { background: linear-gradient(0deg, rgba(3, 9, 17, 0.99) 0%, rgba(3, 9, 17, 0.91) 39%, rgba(3, 9, 17, 0.2) 72%, rgba(3, 9, 17, 0.04) 100%); }
   .hero-copy-desktop { display: none; }
   .hero-copy-mobile { display: inline; }
@@ -2205,6 +2205,14 @@ footer {
   .products-contact { margin-top: 64px; padding: 46px 0; }
   .products-contact-actions { width: 100%; align-items: stretch; flex-direction: column; gap: 14px; }
   .products-contact-actions .button { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .hero-image { object-position: 85% center; }
+}
+
+@media (max-width: 360px) {
+  .hero-image { object-position: 82% center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2686,4 +2694,40 @@ footer {
   .comparison-dialog { width: calc(100% - 20px); }
   .comparison-dialog-inner { padding: 22px 15px; }
   .comparison-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Stealth Admin Access Gate ── */
+.secret-gate-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.secret-gate-trigger {
+  user-select: none;
+  cursor: default;
+}
+
+.stealth-admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+  color: #9ba9b8;
+  transition: opacity 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 2px;
+  vertical-align: middle;
+}
+
+.stealth-admin-link:hover {
+  opacity: 0.9;
+  color: #38bdf8;
+  transform: scale(1.15);
+}
+
+.stealth-admin-link svg {
+  width: 10px;
+  height: 10px;
 }
