@@ -94,4 +94,47 @@ export function importProductsJSON(file: File): Promise<Product[]> {
   });
 }
 
+/* ── Neon / Vercel Database Synchronization ─────────────────────── */
+
+export async function syncCatalogWithDatabase(products: Product[]): Promise<{ success: boolean; error?: string }> {
+  try {
+    const res = await fetch('/api/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        secret: ADMIN_PASSWORD,
+        products,
+      }),
+    });
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      return { success: false, error: data.error || `Error ${res.status}` };
+    }
+
+    saveProducts(products);
+    return { success: true };
+  } catch (err: any) {
+    return { success: false, error: err.message || 'Error de conexión con el servidor' };
+  }
+}
+
+export async function fetchCatalogFromDatabase(): Promise<Product[] | null> {
+  try {
+    const res = await fetch('/api/products', { cache: 'no-store' });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (Array.isArray(data) && data.length > 0) {
+      saveProducts(data);
+      return data as Product[];
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export { defaultProducts };
+

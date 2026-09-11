@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Product } from '@/lib/product-types';
 import { slugify } from '@/lib/product-types';
-import { isAuthenticated, loadProducts, saveProducts, resetProducts, hasLocalChanges } from '@/lib/admin-store';
+import { isAuthenticated, loadProducts, saveProducts, resetProducts, hasLocalChanges, fetchCatalogFromDatabase } from '@/lib/admin-store';
 
 import { AdminLogin } from '@/components/admin/admin-login';
 import { AdminToolbar } from '@/components/admin/admin-toolbar';
@@ -22,6 +22,12 @@ export default function AdminPage() {
     setAuthed(isAuthenticated());
     setProducts(loadProducts());
     setChanges(hasLocalChanges());
+
+    fetchCatalogFromDatabase().then((dbProducts) => {
+      if (dbProducts && dbProducts.length > 0) {
+        setProducts(dbProducts);
+      }
+    });
   }, []);
 
   const persist = useCallback((updated: Product[]) => {

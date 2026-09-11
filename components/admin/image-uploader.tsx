@@ -84,6 +84,30 @@ export function ImageUploader({
 
     try {
       const dataUrl = await compressImage(file, maxWidth, quality);
+
+      // Subir a Vercel Blob para obtener URL CDN permanente
+      try {
+        const uploadRes = await fetch('/api/upload', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            filename: file.name,
+            file: dataUrl,
+            contentType: 'image/webp',
+          }),
+        });
+
+        if (uploadRes.ok) {
+          const { url } = await uploadRes.json();
+          if (url) {
+            onChange(url);
+            return;
+          }
+        }
+      } catch {
+        // Fallback a dataUrl en caso de entorno local sin conexión a Blob
+      }
+
       onChange(dataUrl);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al procesar la imagen');

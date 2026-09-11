@@ -1,9 +1,9 @@
 'use client';
 
-import { useRef } from 'react';
-import { Download, Upload, RotateCcw, LogOut, Snowflake, AlertTriangle } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { Download, Upload, RotateCcw, LogOut, Snowflake, AlertTriangle, Cloud, Check, Loader2 } from 'lucide-react';
 import type { Product } from '@/lib/product-types';
-import { exportProductsJSON, importProductsJSON, logout } from '@/lib/admin-store';
+import { exportProductsJSON, importProductsJSON, logout, syncCatalogWithDatabase } from '@/lib/admin-store';
 
 type ToolbarProps = {
   products: Product[];
@@ -15,6 +15,20 @@ type ToolbarProps = {
 
 export function AdminToolbar({ products, hasChanges, onImport, onReset, onLogout }: ToolbarProps) {
   const fileInput = useRef<HTMLInputElement>(null);
+  const [syncing, setSyncing] = useState(false);
+  const [synced, setSynced] = useState(false);
+
+  async function handleSyncDb() {
+    setSyncing(true);
+    const res = await syncCatalogWithDatabase(products);
+    setSyncing(false);
+    if (res.success) {
+      setSynced(true);
+      setTimeout(() => setSynced(false), 3000);
+    } else {
+      alert('Error al sincronizar con la base de datos: ' + (res.error || 'Error desconocido'));
+    }
+  }
 
   function handleExport() {
     exportProductsJSON(products);
@@ -55,12 +69,28 @@ export function AdminToolbar({ products, hasChanges, onImport, onReset, onLogout
         {hasChanges && (
           <span className="admin-unsaved-badge">
             <AlertTriangle aria-hidden="true" />
-            Cambios sin exportar
+            Cambios sin guardar en BD
           </span>
         )}
       </div>
 
       <nav className="admin-toolbar-actions">
+        <button
+          className="admin-btn admin-btn-primary"
+          type="button"
+          onClick={handleSyncDb}
+          disabled={syncing}
+          title="Guardar y publicar catálogo en Neon Postgres (Vercel)"
+        >
+          {syncing ? (
+            <Loader2 aria-hidden="true" style={{ animation: 'adminSpin 1s linear infinite' }} />
+          ) : synced ? (
+            <Check aria-hidden="true" />
+          ) : (
+            <Cloud aria-hidden="true" />
+          )}
+          <span>{syncing ? 'Guardando...' : synced ? '¡Guardado en BD!' : 'Guardar en BD Vercel'}</span>
+        </button>
         <button className="admin-btn admin-btn-ghost" type="button" onClick={handleExport} title="Exportar JSON">
           <Download aria-hidden="true" />
           <span>Exportar</span>

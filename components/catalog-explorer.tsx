@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@/components/link';
 import { ArrowRight, Check, Columns3, FileDown, Search, SlidersHorizontal, Trash2, X } from 'lucide-react';
@@ -9,8 +9,6 @@ import { products, productSegments, productInquiry } from '@/lib/products';
 import type { Product } from '@/lib/products';
 
 const all = 'Todos';
-const technologies = [all, ...Array.from(new Set(products.map((product) => product.technology)))];
-const refrigerants = [all, ...Array.from(new Set(products.map((product) => product.refrigerant)))];
 
 function ProductCard({
   product,
@@ -69,6 +67,7 @@ function ProductCard({
 }
 
 export function CatalogExplorer() {
+  const [items, setItems] = useState<Product[]>(products);
   const [segment, setSegment] = useState<string>(all);
   const [technology, setTechnology] = useState(all);
   const [refrigerant, setRefrigerant] = useState(all);
@@ -76,9 +75,26 @@ export function CatalogExplorer() {
   const [comparison, setComparison] = useState<string[]>([]);
   const comparisonDialog = useRef<HTMLDialogElement>(null);
 
+  useEffect(() => {
+    fetch('/api/products')
+      .then((res) => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setItems(data);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const technologies = useMemo(() => [all, ...Array.from(new Set(items.map((p) => p.technology)))], [items]);
+  const refrigerants = useMemo(() => [all, ...Array.from(new Set(items.map((p) => p.refrigerant)))], [items]);
+
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase('es');
-    return products.filter((product) => {
+    return items.filter((product) => {
       const searchable = [
         product.title,
         product.brand,
@@ -93,10 +109,10 @@ export function CatalogExplorer() {
         && (refrigerant === all || product.refrigerant === refrigerant)
         && (!normalizedQuery || searchable.includes(normalizedQuery));
     });
-  }, [query, refrigerant, segment, technology]);
+  }, [items, query, refrigerant, segment, technology]);
 
   const hasFilters = segment !== all || technology !== all || refrigerant !== all || query.length > 0;
-  const selectedProducts = products.filter((product) => comparison.includes(product.slug));
+  const selectedProducts = items.filter((product) => comparison.includes(product.slug));
   const toggleComparison = (slug: string) => {
     setComparison((current) => {
       if (current.includes(slug)) return current.filter((item) => item !== slug);
