@@ -5,6 +5,7 @@ import {
   Bolt,
   BriefcaseBusiness,
   Check,
+  ChevronDown,
   ClipboardCheck,
   Clock3,
   Gauge,
@@ -25,12 +26,6 @@ import { Link } from '@/components/link';
 import { BtuSelector } from '@/components/btu-selector';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNavigation } from '@/components/site-navigation';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 
 export const dynamic = 'force-static';
 
@@ -468,14 +463,17 @@ export default function Home() {
 
         <div className="faq-card" id="preguntas">
           <span className="section-kicker">Preguntas Frecuentes</span>
-          <Accordion className="faq-list">
-            {faqs.map((faq, index) => (
-              <AccordionItem className="faq-item" key={faq.question} value={`faq-${index}`}>
-                <AccordionTrigger className="faq-trigger">{faq.question}</AccordionTrigger>
-                <AccordionContent className="faq-content"><p>{faq.answer}</p></AccordionContent>
-              </AccordionItem>
+          <div className="faq-list">
+            {faqs.map((faq) => (
+              <details className="faq-item" key={faq.question}>
+                <summary className="faq-trigger">
+                  <span>{faq.question}</span>
+                  <ChevronDown aria-hidden="true" />
+                </summary>
+                <div className="faq-content"><p>{faq.answer}</p></div>
+              </details>
             ))}
-          </Accordion>
+          </div>
         </div>
       </section>
 

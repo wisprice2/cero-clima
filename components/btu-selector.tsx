@@ -3,7 +3,15 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, Calculator, Info, Ruler } from 'lucide-react';
 
-const capacities = [9000, 12000, 18000, 24000, 36000, 48000, 60000];
+const equipmentRanges = [
+  { capacity: 9000, maxArea: 18 },
+  { capacity: 12000, maxArea: 24 },
+  { capacity: 18000, maxArea: 36 },
+  { capacity: 24000, maxArea: 48 },
+  { capacity: 36000, maxArea: 72 },
+  { capacity: 48000, maxArea: 96 },
+  { capacity: 60000, maxArea: 120 },
+];
 
 function formatBtu(value: number) {
   return new Intl.NumberFormat('es-CL').format(value);
@@ -13,9 +21,7 @@ export function BtuSelector() {
   const [area, setArea] = useState(20);
 
   const recommendation = useMemo(() => {
-    const estimatedLoad = area * 600;
-    const capacity = capacities.find((item) => item >= estimatedLoad) ?? capacities.at(-1)!;
-    return { capacity, estimatedLoad };
+    return equipmentRanges.find((item) => area <= item.maxArea) ?? equipmentRanges.at(-1)!;
   }, [area]);
 
   const inquiry = `https://wa.me/56996809677?text=${encodeURIComponent(
@@ -34,7 +40,7 @@ export function BtuSelector() {
           </p>
           <div className="btu-note">
             <Info aria-hidden="true" />
-            <span>Estimación para altura estándar, ocupación habitual y aislación media.</span>
+            <span>Referencia inicial de 500 BTU por m² para altura estándar, ocupación habitual y aislación media.</span>
           </div>
         </div>
 
@@ -47,20 +53,20 @@ export function BtuSelector() {
             id="area-range"
             type="range"
             min="6"
-            max="90"
+            max="120"
             step="1"
             value={area}
             onChange={(event) => setArea(Number(event.target.value))}
             aria-valuetext={`${area} metros cuadrados`}
           />
-          <div className="btu-scale" aria-hidden="true"><span>6 m²</span><span>90 m²</span></div>
+          <div className="btu-scale" aria-hidden="true"><span>6 m²</span><span>120 m²</span></div>
 
           <div className="btu-result" aria-live="polite">
             <Calculator aria-hidden="true" />
             <div>
               <span>Capacidad sugerida</span>
               <strong>{formatBtu(recommendation.capacity)} BTU/h</strong>
-              <small>Carga estimada: {formatBtu(recommendation.estimatedLoad)} BTU/h</small>
+              <small>Cobertura referencial: hasta {recommendation.maxArea} m²</small>
             </div>
           </div>
 

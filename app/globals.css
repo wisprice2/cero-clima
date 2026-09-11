@@ -919,7 +919,7 @@ a:focus-visible, button:focus-visible {
 
 .btu-control-panel input[type='range'] {
   width: 100%;
-  min-height: 32px;
+  min-height: 44px;
   margin-top: 25px;
   accent-color: var(--cyan-bright);
   cursor: pointer;
@@ -1618,6 +1618,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .faq-list {
+  display: grid;
   gap: 7px;
   margin-top: 18px;
 }
@@ -1629,12 +1630,30 @@ a:focus-visible, button:focus-visible {
 }
 
 .faq-trigger {
-  min-height: 42px;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
   padding: 10px 13px;
   color: #dce5ee;
+  cursor: pointer;
   font-size: 0.75rem;
+  font-weight: 500;
+  list-style: none;
   text-decoration: none !important;
 }
+
+.faq-trigger::-webkit-details-marker { display: none; }
+
+.faq-trigger svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  transition: transform 180ms ease;
+}
+
+.faq-item[open] .faq-trigger svg { transform: rotate(180deg); }
 
 .faq-trigger:hover {
   background: rgba(0, 194, 255, 0.045);
@@ -2101,7 +2120,7 @@ footer {
 
 @media (max-width: 560px) {
   .shell { width: min(calc(100% - 24px), var(--shell)); }
-  .brand { width: 122px; height: 38px; }
+  .brand { width: 122px; height: 44px; }
   .brand-image { top: -61px; left: -19px; width: 155px; }
   .site-header .button { width: 40px; min-height: 40px; padding: 0; border-radius: 50%; }
   .site-header .button:not(.offer-button) { font-size: 0; }
@@ -2556,7 +2575,7 @@ footer {
   font-size: 0.75rem;
 }
 
-.product-breadcrumb a { display: inline-flex; align-items: center; gap: 6px; color: #c1d0dc; }
+.product-breadcrumb a { display: inline-flex; min-height: 44px; align-items: center; gap: 6px; color: #c1d0dc; }
 .product-breadcrumb svg { width: 15px; }
 
 .product-detail-grid {
