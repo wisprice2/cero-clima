@@ -9,6 +9,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ceroclima.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'CEROCLIMA | Climatización sustentable en Chile',
     template: '%s | CEROCLIMA',
@@ -25,6 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_CL',
+    url: 'https://www.ceroclima.com',
     siteName: 'CEROCLIMA',
     title: 'CEROCLIMA | Climatización sustentable en Chile',
     description: 'Climatización residencial y comercial con presencia técnica desde Arica hasta Los Lagos.',
