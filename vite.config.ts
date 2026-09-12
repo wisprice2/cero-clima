@@ -49,6 +49,9 @@ export default defineConfig(async () => {
     define: {
       'process.env.__VINEXT_IMAGE_UNOPTIMIZED': JSON.stringify('true'),
     },
+    optimizeDeps: {
+      exclude: ['lucide-react'],
+    },
     css: { postcss: { plugins: [tailwindcss()] } },
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }

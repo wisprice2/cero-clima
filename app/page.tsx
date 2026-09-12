@@ -438,7 +438,12 @@ export default function Home() {
             </div>
           </div>
           <div className="about-photo">
-            <Image src="/images/proyecto-sarabia.webp" alt="Proyecto técnico de climatización ejecutado por CEROCLIMA" width="1792" height="1024" />
+            <Image
+              src="/images/experiencia-tecnica-21-anos.webp"
+              alt="Técnico senior supervisando una instalación profesional de climatización"
+              width="1600"
+              height="1067"
+            />
           </div>
         </div>
       </section>
